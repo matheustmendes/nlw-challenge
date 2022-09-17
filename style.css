@@ -1,0 +1,187 @@
+/* css reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* site background */
+
+body {
+    background-image: url(./assets/Fundo.jpg) ;
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+/* header & header image config */
+
+header {
+    
+    margin-top: 32px;
+    height: calc(120 + 32px);
+    text-align: center;
+
+
+}
+
+header div img {
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    margin: auto;
+    background: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+}
+
+/* general config on sections */
+
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
+}
+
+/* reset on list default configs */
+
+ul {
+    list-style: none;
+}
+
+
+/* Linear Gradient in sections */
+
+section {
+    background: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+/* list background */
+section div {
+    background-color: #262629;
+    padding-top: 24px;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-bottom: 24px;
+    border-radius: 8px;
+}
+
+/* fonts & colors config */
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: white;
+    padding-bottom: 10px;
+
+}
+
+section p {
+    font-family: 'Montserrat Regular', sans-serif;
+    font-size: 16px;
+    color: #C1C1C1;
+    padding-bottom: 24px;
+}
+
+/* aligning items side by side */
+
+section ul {
+    display: flex;
+    gap: 16px;
+
+}
+
+/* hover animation on list & header image elements */
+
+header div img:hover {
+    
+    transform: scale(1.1);
+}
+
+header div img {
+
+    transition: transform .3s;
+}
+
+
+section ul li:hover {
+
+    transform: scale(1.1);
+}
+
+section ul li {
+    transition: transform .3s;
+}
+/* borda na imagem dos filmes */
+
+
+.film-list img {
+    border: 1px solid #555555;
+    border-radius: 8px;
+}
+
+.series-list img {
+    border: 1px solid #555555;
+    border-radius: 8px;
+}
+
+/* animation */
+
+header div img {
+
+    animation: fromTop .7s .2s backwards;
+}
+
+main section {
+    animation: fromLeft .7s .1s backwards;
+}
+
+
+main section:nth-child(1) {
+
+    animation-delay: 0s;
+}
+
+main section:nth-child(2) {
+
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+
+    animation-delay: .8s;
+}
+
+
+@keyframes fromTop {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fromLeft {
+    
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
